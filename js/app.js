@@ -24,7 +24,10 @@ let totalIngresos=()=>
     let totalIngreso=0;
     for(let ingreso of ingresos)
     {
-        totalIngreso+=ingreso.valor;
+        if(ingreso.valor>0)
+        {
+            totalIngreso+=ingreso.valor;
+        }
     }
     return totalIngreso;
 }
@@ -33,7 +36,10 @@ let totalEgresos=()=>
     let totalEgreso=0;
     for(let egreso of egresos)
     {
-        totalEgreso+=egreso.valor;
+        if(egreso.valor>0)
+        {
+            totalEgreso+=egreso.valor;
+        }
     }
     return totalEgreso;
 }
