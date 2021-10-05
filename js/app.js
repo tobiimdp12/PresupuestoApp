@@ -63,7 +63,10 @@ const cargarIngresos=()=>{
     let ingresosHTML='';
     for(let ingreso of ingresos)
     {
-        ingresosHTML+=crearIngresosHTML(ingreso);
+        if(ingreso.valor>0)
+        {
+            ingresosHTML+=crearIngresosHTML(ingreso);
+        }
     }
     document.getElementById('lista-ingresos').innerHTML=ingresosHTML;
 }
@@ -96,7 +99,10 @@ const cargarEgresos=()=>{
     let egresosHTML='';
     for(let egreso of egresos)
     {
-        egresosHTML+=crearEgresosHTML(egreso);
+        if(egreso.valor>0)
+        {
+            egresosHTML+=crearEgresosHTML(egreso);
+        }
     }
     document.getElementById('lista-egresos').innerHTML=egresosHTML;
 }
